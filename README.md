@@ -1,7 +1,7 @@
-# **WOFS - The Ultimate Write-Only File System**
+# **WOFS2 - The Ultimate Write-Only File System**
 ## **Infinite Storage. Unbreakable Security. Absolute Safety.**
 
-Welcome to **WOFS (Write-Only File System)**—the **pinnacle of modern file storage technology**. Forget traditional storage limitations—WOFS offers **infinite capacity**, **unparalleled security**, and **absolute privacy** by **redirecting all data to /dev/null**. It’s the **last file system you will ever need!**
+Welcome to **WOFS (Write-Only File System 2)**—the **pinnacle of modern file storage technology**. Forget traditional storage limitations—WOFS offers **infinite capacity**, **unparalleled security**, and **absolute privacy** by **redirecting all data to /dev/null**. It’s the **last file system you will ever need!**
 
 ---
 
@@ -42,7 +42,7 @@ sudo apt update && sudo apt install -y linux-headers-$(uname -r) build-essential
 
 ### **🛠 Step 2: Clone & Compile WOFS**
 ```bash
-git clone https://github.com/wofs-team/wofs.git
+git clone https://github.com/wofs-team/wofs2.git
 cd wofs
 make
 ```
