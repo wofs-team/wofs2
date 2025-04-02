@@ -1,0 +1,28 @@
+[package]
+name = "wofs"
+version = "0.1.0"
+edition = "2021"
+authors = ["WOFS Team (Rust)"]
+description = "WOFS - Write-Only Filesystem, honoring /dev/null"
+license = "GPL-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["staticlib"]
+test = false
+bench = false
+
+[dependencies]
+kernel = { path = "../rust" }  # This refers to the kernel crate in the Rust for Linux project
+
+[features]
+default = []
+
+# The build-dependencies section is important for building a kernel module
+[build-dependencies]
+bindgen = "0.60.0"
+cc = "1.0.73"
+
+[package.metadata.kernel]
+is_builtin = false  # This is a loadable module, not built into the kernel

@@ -1,0 +1,14 @@
+# Kbuild file for WOFS Rust kernel module
+
+# This tells the kernel build system that this module is written in Rust
+obj-m += wofs.o
+wofs-y := wofs.rust.o
+
+# Additional flags for Rust compiler if needed
+RUSTFLAGS_wofs.rust := --cfg wofs_module
+
+# Enable Rust build for this module
+CONFIG_RUST := y
+
+# Explicitly add Rust kern-mod feature (needed for kernel modules)
+RUSTFLAGS_wofs.rust += --cfg feature=\"kern-mod\"

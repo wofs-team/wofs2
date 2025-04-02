@@ -1,0 +1,12 @@
+config WOFS
+	tristate "Write-Only File System (WOFS)"
+	depends on RUST
+	help
+	  This module implements a Write-Only File System (WOFS) where
+	  all writes are redirected to /dev/null. Files appear to exist and
+	  operations seem to succeed, but all written data is discarded.
+
+	  This filesystem can be useful for testing applications that expect
+	  to write to filesystems without actually storing any data.
+
+	  If unsure, say N.
